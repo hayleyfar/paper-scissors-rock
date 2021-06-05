@@ -2,40 +2,38 @@
 import random
 print("Welcome to my paper scissors rock game! \nYou will be asked paper, scissors or rock and the program will also pick as well :D")
 #list
-program_answers = ["paper","scissors","rock"]
+program_answers = ["p","s","r"]
 print("\n")
-users_choice = input("paper, scissors or rock? \nYour answer: ")
+users_choice = input("paper, scissors or rock? (enter p/s/r) \nYour Answer: ")
 #random word from list
 program = random.choice(program_answers)
-print("Program answer: " ,program )
+print("Program answer:" ,program )
 #tie for all paper, scissors or rock answers
 if users_choice.lower() == program:
  print("tie")
 
-while users_choice.lower() == "paper":
- if program == "scissors":
+while users_choice.lower() == "p":
+ if program == "s":
    print("you lose")
    break #stop code
- elif program == "rock":
+ elif program == "r":
    print("you win!")
    break
 
-while users_choice.lower() == "scissors":
- if program == "paper":
+while users_choice.lower() == "s":
+ if program == "p":
    print("you win!")
    break
- elif program == "rock":
+ elif program == "r":
    print("you lose")
    break
 
-while users_choice.lower() == "rock":
- if program == "scissors":
+while users_choice.lower() == "r":
+ if program == "s":
    print("you win!")
    break
- elif program == "paper":
+ elif program == "p":
    print("you lose")
    break
-
 else:
-  print("\n")
-  print("you did not enter paper, scissors or rock")
+  print("you did not enter p/s/r")
