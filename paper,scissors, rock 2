@@ -20,6 +20,7 @@ while users_choice.lower() == "p":
    print("you win!")
    break
 
+
 while users_choice.lower() == "s":
  if program == "p":
    print("you win!")
@@ -35,5 +36,8 @@ while users_choice.lower() == "r":
  elif program == "p":
    print("you lose")
    break
-else:
+#if users choice is not p/s/r
+while users_choice not in program_answers: 
+  print("\n")
   print("you did not enter p/s/r")
+  break
