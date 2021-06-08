@@ -1,6 +1,6 @@
 #paper scissors rock game
 import random
-print("Welcome to my paper scissors rock game! \nYou will be asked paper, scissors or rock and the program will also pick as well :D")
+print("Welcome to my paper scissors rock game! \nYou will be asked paper, scissors or rock and the program will also pick as well :D \n\nLet the battle begin!!")
 #list
 program_answers = ["p","s","r"]
 print("\n")
