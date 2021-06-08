@@ -37,7 +37,7 @@ while users_choice.lower() == "r":
    print("you lose")
    break
 #if users choice is not p/s/r
-while users_choice not in program_answers: 
+while users_choice.lower() not in program_answers: 
   print("\n")
   print("you did not enter p/s/r")
   break
