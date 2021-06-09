@@ -1,0 +1,33 @@
+#paper scissors rock game, ask the user either paper, scissors or rock and compare their input to the programs input
+import random
+print("Welcome to my paper scissors rock game! \nYou will be asked paper, scissors or rock and the program will also pick as well :D \n\nLet the battle begin!!")
+program_answers = ["p","s","r"]
+print("\n")
+users_choice = input("paper, scissors or rock? (enter p/s/r) \nYour Answer: ")
+program = random.choice(program_answers)
+print("Program answer:" ,program )
+#tie for all paper, scissors or rock answers
+if users_choice.lower() == program:
+ print("tie")
+#if the user enters paper, users input will compare with the programs input
+if program.lower() == "p" :
+    if users_choice == "s" :
+        print("you win")
+    elif users_choice == "r" :
+        print("you lose")
+#if the user enters scissors, users input will compare with the programs input
+elif program.lower() == "r" :
+    if users_choice == "s" :
+        print("you lose")
+    elif users_choice == "p" :
+        print("you win")
+#if the user enters rock, users input will compare with the programs input
+elif program.lower() == "s" :
+    if users_choice == "p" :
+        print("you lose")
+    elif users_choice == "r" :
+        print("you win")
+#if users choice is not p/s/r, will let the user know it is not a valid answer
+if users_choice.lower() not in program_answers: 
+    print("\n")
+    print("you did not enter p/s/r")
