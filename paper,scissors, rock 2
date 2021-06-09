@@ -1,43 +1,40 @@
-#paper scissors rock game
+#paper scissors rock game, ask the user either paper, scissors or rock and compare their input to the programs input
 import random
 print("Welcome to my paper scissors rock game! \nYou will be asked paper, scissors or rock and the program will also pick as well :D \n\nLet the battle begin!!")
-#list
 program_answers = ["p","s","r"]
 print("\n")
 users_choice = input("paper, scissors or rock? (enter p/s/r) \nYour Answer: ")
-#random word from list
 program = random.choice(program_answers)
 print("Program answer:" ,program )
 #tie for all paper, scissors or rock answers
 if users_choice.lower() == program:
  print("tie")
-
+#if the user enters paper, users input will compare with the programs input
 while users_choice.lower() == "p":
- if program == "s":
-   print("you lose")
-   break #stop code
- elif program == "r":
-   print("you win!")
-   break
-
-
+    if program == "s":
+        print("you lose")
+        break #stop code
+    elif program == "r":
+        print("you win!")
+        break
+#if the user enters scissors, users input will compare with the programs input
 while users_choice.lower() == "s":
- if program == "p":
-   print("you win!")
-   break
- elif program == "r":
-   print("you lose")
-   break
-
+    if program == "p":
+        print("you win!")
+        break
+    elif program == "r":
+        print("you lose")
+        break
+#if the user enters rock, users input will compare with the programs input
 while users_choice.lower() == "r":
- if program == "s":
-   print("you win!")
-   break
- elif program == "p":
-   print("you lose")
-   break
-#if users choice is not p/s/r
+    if program == "s":
+        print("you win!")
+        break
+    elif program == "p":
+        print("you lose")
+        break
+#if users choice is not p/s/r, will let the user know it is not a valid answer
 while users_choice.lower() not in program_answers: 
-  print("\n")
-  print("you did not enter p/s/r")
-  break
+    print("\n")
+    print("you did not enter p/s/r")
+    break
