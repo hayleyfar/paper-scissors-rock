@@ -12,8 +12,8 @@ if users_choice.lower() == program:
 #if the user enters paper, users input will compare with the programs input
 while users_choice.lower() == "p":
     if program == "s":
-        print("you lose")
-        break #stop code
+        print("you lose") 
+        break
     elif program == "r":
         print("you win!")
         break
